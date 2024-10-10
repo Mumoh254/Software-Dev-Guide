@@ -1,0 +1,309 @@
+/* =Reset default browser CSS. Based on work by Eric Meyer: 
+-------------------------------------------------------------- */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  background: transparent;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  vertical-align: baseline; 
+}
+
+body {
+  line-height: 1; 
+}
+
+/* Global Styles */
+:root {
+  --transition-duration: 1.2s;
+  --height-large: 60px;
+  --height-small: 30px;
+  --mobile-nav-large: 100px;
+  --mobile-nav-small: 50px;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: border-box; 
+}
+body {
+  background-color: #3cb5f9; /* Light Blue Background */
+  color: #505050;
+  font-family: "Ubuntu", sans-serif;
+  font-weight: 200;
+  font-size: 22px;
+  line-height: 1.8; 
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+  font-weight: 300; 
+}
+
+a {
+  text-decoration: none;
+  color: #3cb5f9; /* Link Color */
+}
+
+a:hover {
+  color: #0793e2; /* Hover Link Color */
+}
+
+/* Layout Styles */
+#wrapper {
+  width: 100%;
+  margin: 0 auto; 
+}
+
+#main {
+  background-color: #fff; /* Main Content Background */
+  padding-top: 100px; 
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 0 10px; 
+}
+
+section {
+  padding: 90px 0 50px 0; 
+}
+
+section h1 {
+  font-weight: 700;
+  margin-bottom: 10px; 
+}
+
+section p {
+  margin-bottom: 30px; 
+}
+
+section p:last-child {
+  margin-bottom: 0; 
+}
+
+section.color {
+  background-color: #3cb5f9; /* Section Background Color */
+  color: white; 
+}
+
+/* Info Bar */
+#info-bar {
+  background-color: #3cb5f9; 
+}
+
+#info-bar a {
+  color: rgb(126, 37, 37);
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  margin: 0;
+  padding: 10px; 
+}
+
+#info-bar a:hover {
+  background-color: #0793e2; 
+}
+
+#info-bar span.all-tutorials,
+#info-bar span.back-to-tutorial {
+  display: block;
+  width: 50%; 
+}
+
+#info-bar span.all-tutorials {
+  float: left;
+  text-align: left; 
+}
+
+#info-bar span.back-to-tutorial {
+  float: right;
+  text-align: right; 
+}
+
+/* Header */
+header {
+  width: 100%;
+
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  z-index: 999;
+  background-color: #0683c9; /* Header Background Color */
+
+}
+.top{
+ 
+    width: 100%;
+    display: flex;
+    color: #fff;
+ 
+}
+#logo{
+  
+    width: 40% !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+}
+
+
+
+header nav {
+  display: block;
+  float: right; 
+}
+
+header nav a {
+  line-height: var(--height-large);
+  margin-left: 20px;
+  color: #9fdbfc; 
+  font-weight: 300;
+  font-size: 12px; 
+}
+
+header nav a:hover {
+  color: white; 
+}
+
+header.smaller {
+  height: var(--height-small); 
+}
+
+header.smaller h1#logo {
+  width: 150px;
+  height: var(--height-small);
+  line-height: var(--height-small);
+  font-size: 30px; 
+}
+
+header.smaller nav a {
+  line-height: var(--height-small); 
+}
+
+/* Footer */
+footer {
+    background-color: #0683c9; /* Footer Background Color */
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+/* Clearfix */
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  content: "";
+  clear: both;
+  height: 0; 
+}
+
+/* Media Queries */
+@media all and (max-width: 660px) {
+  header h1#logo {
+    display: block;
+    float: none;
+    margin: 0 auto;
+    height: 100px;
+    line-height: 100px;
+    text-align: center; 
+  }
+
+  header nav {
+    display: block;
+    float: none;
+    height: 50px;
+    text-align: center;
+    margin: 0 auto; 
+  }
+
+  header nav a {
+    line-height: 50px;
+    margin: 0 10px; 
+  }
+
+  header.smaller {
+    height: 75px; 
+  }
+
+  header.smaller h1#logo {
+    height: 40px;
+    line-height: 40px;
+    font-size: 30px; 
+  }
+
+  header.smaller nav {
+    height: 35px; 
+  }
+
+  header.smaller nav a {
+    line-height: 35px; 
+  }
+}
+
+@media all and (max-width: 600px) {
+  .container {
+    width: 100%; 
+  }
+
+  #info-bar a {
+    display: block; 
+  }
+
+  #info-bar span.all-tutorials,
+  #info-bar span.back-to-tutorial {
+    width: 100%; 
+  }
+
+  #info-bar span.all-tutorials,
+  #info-bar span.back-to-tutorial {
+    float: none;
+    text-align: center; 
+  }
+
+  #info-bar span.all-tutorials {
+    border-bottom: solid 1px #0793e2; 
+  }
+}
+
+/* Style for the containers */
+.containe {
+    padding: 20px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+   
+    border-radius: 10px;
+}
+
+/* Style for tutorial section */
+.tutorial {
+    margin-bottom: 20px;
+}
+
+/* Style for the button */
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #0793e2;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0792e2b2;
+    color: #333;
+}
